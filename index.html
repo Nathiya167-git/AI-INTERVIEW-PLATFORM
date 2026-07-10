@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Interview Platform</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Platform
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('home') }}">Home</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('about') }}">About</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('contact') }}">Contact</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('login') }}" class="btn-login"> Login </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('register') }}" class="btn-register">
+              Register
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>AI Based Interview Platform</h1>
+
+        <p>
+          Practice interviews, answer AI-generated questions, and receive
+          instant feedback to improve your interview skills.
+        </p>
+
+        <a href="{{ url_for('register') }}" class="hero-btn"> Get Started </a>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+      <h2>Platform Features</h2>
+
+      <div class="feature-container">
+        <div class="feature-card">
+          <i class="fa-solid fa-user-plus"></i>
+
+          <h3>Easy Registration</h3>
+
+          <p>Create an account and start your interview journey.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-brain"></i>
+
+          <h3>AI Questions</h3>
+
+          <p>Questions are generated based on the selected interview domain.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-video"></i>
+
+          <h3>Camera Interview</h3>
+
+          <p>Attend interviews using your webcam and microphone.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-chart-column"></i>
+
+          <h3>Instant Results</h3>
+
+          <p>Receive interview scores and feedback immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="steps">
+      <h2>How It Works</h2>
+
+      <div class="step-container">
+        <div class="step">
+          <span>1</span>
+
+          <h3>Register</h3>
+
+          <p>Create your account.</p>
+        </div>
+
+        <div class="step">
+          <span>2</span>
+
+          <h3>Select Domain</h3>
+
+          <p>Choose Java, Python, Web Development, etc.</p>
+        </div>
+
+        <div class="step">
+          <span>3</span>
+
+          <h3>Start Interview</h3>
+
+          <p>Enable your camera and answer AI-generated questions.</p>
+        </div>
+
+        <div class="step">
+          <span>4</span>
+
+          <h3>View Results</h3>
+
+          <p>Check your score and interview performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+      <h2>About This Project</h2>
+
+      <p>
+        The AI Interview Platform helps candidates prepare for technical
+        interviews through AI-generated questions, live webcam interviews, voice
+        responses, and automated evaluation. It also provides HR with an
+        efficient way to review candidate performance.
+      </p>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>
+        © 2026 AI Interview Platform | Developed using HTML, CSS, JavaScript,
+        Flask & Firebase
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
