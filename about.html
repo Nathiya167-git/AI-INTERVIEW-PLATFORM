@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About | AI Interview Platform</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVIGATION BAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Platform
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('home') }}"> Home </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('about') }}"> About </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('contact') }}"> Contact </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('login') }}"> Login </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-page">
+      <div class="about-container">
+        <h1>About AI Interview Platform</h1>
+
+        <p>
+          The AI Interview Platform is a web-based application designed to help
+          candidates attend technical interviews online. The system generates
+          interview questions using Artificial Intelligence, records candidate
+          responses through the webcam and microphone, and stores interview
+          details securely for HR review.
+        </p>
+
+        <hr />
+
+        <h2>Project Objectives</h2>
+
+        <ul>
+          <li>Provide an online interview experience.</li>
+
+          <li>Generate interview questions using AI.</li>
+
+          <li>Record interview using webcam and microphone.</li>
+
+          <li>Store candidate responses securely.</li>
+
+          <li>Help HR review interview performance.</li>
+        </ul>
+
+        <hr />
+
+        <h2>Key Features</h2>
+
+        <div class="feature-list">
+          <div>
+            <i class="fa-solid fa-user-plus"></i>
+
+            Candidate Registration
+          </div>
+
+          <div>
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            Secure Login
+          </div>
+
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+
+            AI Generated Questions
+          </div>
+
+          <div>
+            <i class="fa-solid fa-video"></i>
+
+            Camera & Microphone Support
+          </div>
+
+          <div>
+            <i class="fa-solid fa-chart-column"></i>
+
+            Interview Result
+          </div>
+
+          <div>
+            <i class="fa-solid fa-user-tie"></i>
+
+            HR Dashboard
+          </div>
+        </div>
+
+        <hr />
+
+        <h2>Technologies Used</h2>
+
+        <table>
+          <tr>
+            <th>Technology</th>
+
+            <th>Purpose</th>
+          </tr>
+
+          <tr>
+            <td>HTML</td>
+
+            <td>Page Structure</td>
+          </tr>
+
+          <tr>
+            <td>CSS</td>
+
+            <td>Styling</td>
+          </tr>
+
+          <tr>
+            <td>JavaScript</td>
+
+            <td>Client-side Functionality</td>
+          </tr>
+
+          <tr>
+            <td>Flask</td>
+
+            <td>Backend Server</td>
+          </tr>
+
+          <tr>
+            <td>Firebase</td>
+
+            <td>Authentication & Database</td>
+          </tr>
+
+          <tr>
+            <td>Gemini API</td>
+
+            <td>Generate Interview Questions</td>
+          </tr>
+        </table>
+
+        <hr />
+
+        <h2>Workflow</h2>
+
+        <ol>
+          <li>Register or Login</li>
+
+          <li>Select Interview Domain</li>
+
+          <li>Start AI Interview</li>
+
+          <li>Answer Questions</li>
+
+          <li>View Result</li>
+
+          <li>HR Reviews Candidate Performance</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>© 2026 AI Interview Platform | Internship Project</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
