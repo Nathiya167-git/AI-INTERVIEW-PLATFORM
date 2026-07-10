@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | AI Interview Platform</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Platform
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('home') }}">Home</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('about') }}">About</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('contact') }}">Contact</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('login') }}">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <p>Have questions or feedback? We'd love to hear from you.</p>
+
+        <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
+          <div class="input-box">
+            <label>Full Name</label>
+
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label>Email Address</label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label>Subject</label>
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Enter subject"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label>Message</label>
+
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT DETAILS ================= -->
+
+    <section class="contact-details">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+
+          <h3>Email</h3>
+
+          <p>support@aiinterview.com</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+
+          <h3>Phone</h3>
+
+          <p>+91 9876543210</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+
+          <h3>Location</h3>
+
+          <p>Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>© 2026 AI Interview Platform | Internship Project</p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
