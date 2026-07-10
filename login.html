@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login | AI Interview Platform</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('home') }}">Home</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('register') }}">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= LOGIN SECTION ================= -->
+
+    <section class="login-section">
+      <div class="login-container">
+        <div class="login-header">
+          <i class="fa-solid fa-user-circle login-icon"></i>
+
+          <h2>Candidate Login</h2>
+
+          <p>Login to continue your interview journey.</p>
+        </div>
+
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+          <!-- Email -->
+
+          <div class="input-box">
+            <label>Email Address</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+
+          <div class="input-box">
+            <label>Password</label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <!-- Remember Me -->
+
+          <div class="remember">
+            <input type="checkbox" id="remember" />
+
+            <label for="remember">Remember Me</label>
+          </div>
+
+          <!-- Login Button -->
+
+          <button type="submit" class="login-btn">
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            Login
+          </button>
+        </form>
+
+        <div class="extra-links">
+          <p>
+            Don't have an account?
+
+            <a href="{{ url_for('register') }}"> Register Here </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>© 2026 AI Interview Platform</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
