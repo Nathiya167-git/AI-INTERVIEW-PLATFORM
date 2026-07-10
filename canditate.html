@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Candidate Dashboard | AI Interview Platform</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Platform
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('home') }}">Home</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('profile') }}">Profile</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('logout') }}">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <section class="dashboard">
+      <div class="dashboard-header">
+        <h1>Welcome, Candidate 👋</h1>
+
+        <p>Select an option below to continue your AI Interview Journey.</p>
+      </div>
+
+      <div class="dashboard-cards">
+        <!-- Card 1 -->
+
+        <div class="card">
+          <i class="fa-solid fa-laptop-code"></i>
+
+          <h2>Select Domain</h2>
+
+          <p>Choose your preferred interview technology.</p>
+
+          <a href="{{ url_for('select_domain') }}" class="card-btn">
+            Select Domain
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="card">
+          <i class="fa-solid fa-video"></i>
+
+          <h2>Start Interview</h2>
+
+          <p>Enable your camera and microphone to begin.</p>
+
+          <a href="{{ url_for('interview') }}" class="card-btn">
+            Start Interview
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="card">
+          <i class="fa-solid fa-chart-column"></i>
+
+          <h2>View Results</h2>
+
+          <p>Check your interview score and AI feedback.</p>
+
+          <a href="{{ url_for('result') }}" class="card-btn"> View Results </a>
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="card">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+
+          <h2>Interview History</h2>
+
+          <p>Your previous interview records will appear here.</p>
+
+          <a href="#" class="card-btn"> Coming Soon </a>
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="card">
+          <i class="fa-solid fa-user"></i>
+
+          <h2>My Profile</h2>
+
+          <p>View and update your profile information.</p>
+
+          <a href="{{ url_for('profile') }}" class="card-btn"> My Profile </a>
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="card">
+          <i class="fa-solid fa-file-arrow-up"></i>
+
+          <h2>Upload Resume</h2>
+
+          <p>Upload or update your latest resume in PDF format.</p>
+
+          <a href="{{ url_for('resume') }}" class="card-btn"> Upload Resume </a>
+        </div>
+
+        <!-- Card 7 -->
+
+        <div class="card">
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          <h2>Logout</h2>
+
+          <p>Securely logout from your account.</p>
+
+          <a href="{{ url_for('logout') }}" class="card-btn"> Logout </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>© 2026 AI Interview Platform | Candidate Dashboard</p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
