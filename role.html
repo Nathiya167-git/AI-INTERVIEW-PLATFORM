@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Select Interview Domain</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Platform
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="{{ url_for('candidate') }}">Dashboard</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('logout') }}">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="domain-section">
+      <div class="domain-container">
+        <h1>Select Your Interview Domain</h1>
+
+        <p>Choose your preferred technology before starting the interview.</p>
+
+        <form method="POST" action="{{ url_for('select_domain') }}">
+          <div class="domain-grid">
+            <label class="domain-card">
+              <input type="radio" name="domain" value="Java" required />
+
+              <i class="fa-brands fa-java"></i>
+
+              <h3>Java</h3>
+            </label>
+
+            <label class="domain-card">
+              <input type="radio" name="domain" value="Python" />
+
+              <i class="fa-brands fa-python"></i>
+
+              <h3>Python</h3>
+            </label>
+
+            <label class="domain-card">
+              <input type="radio" name="domain" value="HTML & CSS" />
+
+              <i class="fa-brands fa-html5"></i>
+
+              <h3>HTML & CSS</h3>
+            </label>
+
+            <label class="domain-card">
+              <input type="radio" name="domain" value="JavaScript" />
+
+              <i class="fa-brands fa-js"></i>
+
+              <h3>JavaScript</h3>
+            </label>
+
+            <label class="domain-card">
+              <input type="radio" name="domain" value="SQL" />
+
+              <i class="fa-solid fa-database"></i>
+
+              <h3>SQL</h3>
+            </label>
+
+            <label class="domain-card">
+              <input type="radio" name="domain" value="Full Stack" />
+
+              <i class="fa-solid fa-laptop-code"></i>
+
+              <h3>Full Stack</h3>
+            </label>
+          </div>
+
+          <br />
+
+          <button type="submit" class="start-btn">
+            <i class="fa-solid fa-circle-play"></i>
+
+            Continue to Interview
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 AI Interview Platform</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
